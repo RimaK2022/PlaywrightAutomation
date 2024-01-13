@@ -6,8 +6,8 @@ test('Google title assertion',async({page})=>           //page fixture
         test.slow();
         await page.goto("https://adactinhotelapp.com/");           //await only used with async fun
         await expect(page).toHaveTitle("Adactin.com - Hotel Reservation System");
-        await page.locator('id=username').type('amarjasonawane');  //id locator
-        await page.locator('//input[@id="password"]').type('Amarja@123');   //xpath
+        await page.locator('id=username').type('RimaKarmakar');  //id locator
+        await page.locator('//input[@id="password"]').type('Rima@123');   //xpath
         await page.locator('//input[@id="login"]').click();
        // const success = await (await page.locator('id=username_show').textContent()).trim();
      //  page.waitForTimeout(60000);
@@ -17,7 +17,7 @@ test('Google title assertion',async({page})=>           //page fixture
 
       //Search hotel page
       await expect(page).toHaveTitle("Adactin.com - Search Hotel");
-      await expect (loc).toBe('Hello amarjasonawane!');
+      await expect (loc).toBe('Hello RimaKarmakar!');
 
       await page.locator('//select[@id="location"]').selectOption('Sydney');
       await page.locator('//select[@id="hotels"]').selectOption({index:1});
@@ -36,8 +36,8 @@ test('Google title assertion',async({page})=>           //page fixture
 
      //book a hotel
      await expect(page).toHaveTitle("Adactin.com - Book A Hotel");  
-     await page.locator('//input[@id="first_name"]').fill('Amarja');
-     await page.locator('//input[@id="last_name"]').fill('Sonawane');
+     await page.locator('//input[@id="first_name"]').fill('Rima');
+     await page.locator('//input[@id="last_name"]').fill('Karmakar');
      await page.locator('//textarea[@id="address"]').fill('Mumbai');
      await page.locator('//input[@id="cc_num"]').click('1234567891234567');
      await page.locator('//select[@id="cc_type"]').selectOption({index:2});

@@ -16,9 +16,9 @@ test('Runs 1',async() =>
 
 test('Runs 2',async() =>
 {
-    await page.locator('#username').fill('amarjasonawane');
+    await page.locator('#username').fill('RimaKarmakar');
     await page.pause();
-    await page.locator('#password').fill('Amarja@123');
+    await page.locator('#password').fill('Rima@123');
     await page.getByRole('button', { name: 'Login' }).click();
 })
 

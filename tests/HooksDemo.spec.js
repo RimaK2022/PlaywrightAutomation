@@ -6,18 +6,17 @@ test.beforeEach('Hooks', async ({ page }) => {
 }
 )
 test('Login Adactin',async({page}) => {
-    await page.locator('#username').fill('amarjasonawane');
-    await page.locator('#password').fill('Amarja@123');
+    await page.locator('#username').fill('RimaKarmakar');
+    await page.locator('#password').fill('Rima@123');
     await page.getByRole('button', { name: 'Login' }).click();
 })
 
 test('Search Hotel',async({page}) => {
 
-    await page.locator('#username').fill('amarjasonawane');
-    await page.locator('#password').fill('Amarja@123');
+    await page.locator('#username').fill('RimaKarmakar');
+    await page.locator('#password').fill('Rima@123');
     await page.getByRole('button', { name: 'Login' }).click();
-   // await expect(page).toHaveTitle("Adactin.com - Search Hotel");
-    //await expect (loc).toBe('Hello amarjasonawane!');
+
     await page.locator('//select[@id="location"]').selectOption('Sydney');
     await page.locator('//select[@id="hotels"]').selectOption({index:1});
     await page.locator('//select[@id="room_type"]').selectOption({label:'Deluxe'});
