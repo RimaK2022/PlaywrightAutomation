@@ -3,9 +3,7 @@ const { test, expect } =require('@playwright/test');
 test('NestedFrameEx', async ({ page }) => {
     await page.goto("https://www.amazon.com");
     //implicit Role
-   await page.getByRole("link",{name:"Hello, sign in Account & Lists"}).click();
- /*   await page.getByRole("textbox",{name:"Email or mobile phone number"}).fill("abc@gmail.com");
-    await page.getByRole("button",{name:"Continue"}).click();*/
+   await page.getByRole("link",{name:"Hello, sign in Account & Lists"}).click()
 
     //Explicit Role
  //   await page.getByRole("button",{name:"Open Menu"}).click();
