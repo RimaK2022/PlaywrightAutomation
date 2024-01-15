@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 
-test.only('Flipkart multiple page', async ({ context }) => {
+test('Flipkart multiple page', async ({ context }) => {
     const page = await context.newPage();  
     await page.goto('https://www.flipkart.com/');
     await page.getByPlaceholder('Search for Products, Brands').click();
@@ -18,7 +18,7 @@ test.only('Flipkart multiple page', async ({ context }) => {
     context.waitForEvent('page'),
     page.getByRole('link', { name: 'APPLE iPhone 15 (Green, 128' }).click()])
  
-    await newPage.waitForLoadState();
+    await newPage.waitForLoadState();   
     await newPage.getByRole('button', { name: 'Add to cart' }).click({force: true});
     await newPage.getByText('Remove').click();
     await newPage.getByText('Remove').nth(2).click();
