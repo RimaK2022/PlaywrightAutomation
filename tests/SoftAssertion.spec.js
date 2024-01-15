@@ -1,6 +1,6 @@
 const { test, expect } = require('@playwright/test');
  
-test.only('Assert Attribute Example', async ({ page }) => {
+test('Assert Attribute Example', async ({ page }) => {
     await page.goto("https://adactinhotelapp.com/index.php");
  
     // Hard Assert:
